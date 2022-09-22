@@ -32,17 +32,17 @@ class MyShape
   }
   
   // Moves the shape a specified quantity on both axes
-  void move (float valX, float valY)
+  void move (float speedX, float speedY)
   {
-    x += valX;
-    y += valY;
+    x += speedX;
+    y += speedY;
   }
   
   // Moves the shape up and down at the boundaries of the canvas
-  void moveBounceVertical (float val)
+  void moveBounceVertical (float speedY)
   {
     // Modify the y position by the specified amount
-    y += (val * dirY);
+    y += (speedY * dirY);
     
     // If shape is above canvas, start moving down (+y)
     if (y < 0)
